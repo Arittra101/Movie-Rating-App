@@ -12,14 +12,149 @@
         android:id="@+id/fragmentContainerView"
         android:name="androidx.navigation.fragment.NavHostFragment"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="0dp"
         app:defaultNavHost="true"
         android:visibility="visible"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/nevbar"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:navGraph="@navigation/navgraph" />
+
+
+      <View
+          android:layout_width="0dp"
+          android:layout_height="0.8dp"
+          android:background="#DED5D5"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintEnd_toEndOf="parent"
+          app:layout_constraintBottom_toTopOf="@+id/nevbar"
+
+          />
+     <androidx.constraintlayout.widget.ConstraintLayout
+         android:id="@+id/nevbar"
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:paddingHorizontal="10dp"
+         android:paddingVertical="10dp"
+         app:layout_constraintBottom_toBottomOf="parent"
+         app:layout_constraintStart_toStartOf="parent"
+         app:layout_constraintEnd_toEndOf="parent">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cvHome"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="40dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent">
+
+
+            <ImageView
+                android:id="@+id/icHome"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/ic_home"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:tint="@color/black" />
+
+            <ImageView
+                android:id="@+id/selectedIcon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@+id/icHome"
+                app:layout_constraintStart_toStartOf="@+id/icHome"
+                app:layout_constraintEnd_toEndOf="@+id/icHome"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:tint="@color/black"
+                android:src="@drawable/ic_round"
+                />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+         <androidx.constraintlayout.widget.ConstraintLayout
+             android:id="@+id/cvProfile"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             app:layout_constraintTop_toTopOf="parent"
+             app:layout_constraintEnd_toEndOf="parent"
+             app:layout_constraintBottom_toBottomOf="parent">
+
+
+             <ImageView
+                 android:id="@+id/icProfile"
+                 android:layout_width="30dp"
+                 android:layout_height="30dp"
+                 android:src="@drawable/ic_account"
+                 android:layout_marginEnd="40dp"
+                 app:layout_constraintStart_toStartOf="parent"
+                 app:layout_constraintTop_toTopOf="parent"
+                 app:layout_constraintEnd_toEndOf="parent"
+                 app:tint="@color/black" />
+
+             <ImageView
+                 android:id="@+id/selectedProfile"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 app:layout_constraintTop_toBottomOf="@+id/icProfile"
+                 app:layout_constraintStart_toStartOf="@+id/icProfile"
+                 app:layout_constraintEnd_toEndOf="@+id/icProfile"
+                 app:layout_constraintBottom_toBottomOf="parent"
+                 app:tint="@color/black"
+                 android:src="@drawable/ic_round"
+                 />
+
+
+         </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+         <androidx.constraintlayout.widget.ConstraintLayout
+             android:id="@+id/cvSearch"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:paddingHorizontal="40dp"
+             app:layout_constraintTop_toTopOf="parent"
+             app:layout_constraintEnd_toStartOf="@+id/cvProfile"
+             app:layout_constraintStart_toEndOf="@+id/cvHome"
+             app:layout_constraintBottom_toBottomOf="parent">
+
+
+             <ImageView
+                 android:id="@+id/icSearch"
+                 android:layout_width="30dp"
+                 android:layout_height="30dp"
+                 android:src="@drawable/ic_search"
+
+                 app:layout_constraintStart_toStartOf="parent"
+                 app:layout_constraintTop_toTopOf="parent"
+                 app:layout_constraintEnd_toEndOf="parent"
+                 app:tint="@color/black" />
+
+             <ImageView
+                 android:id="@+id/selectedSearch"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 app:layout_constraintTop_toBottomOf="@+id/icSearch"
+                 app:layout_constraintStart_toStartOf="@+id/icSearch"
+                 app:layout_constraintEnd_toEndOf="@+id/icSearch"
+                 app:layout_constraintBottom_toBottomOf="parent"
+                 app:tint="@color/black"
+                 android:src="@drawable/ic_round"
+                 />
+
+
+         </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+     </androidx.constraintlayout.widget.ConstraintLayout>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

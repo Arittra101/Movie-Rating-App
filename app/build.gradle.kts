@@ -58,4 +58,9 @@ dependencies {
     implementation(libs.kotlinx.coroutines.core)
     implementation(libs.kotlinx.coroutines.android)
 
+    implementation(libs.androidx.viewpager2)
+
+    implementation(libs.glide)
+    implementation(libs.material.v190) // Latest stable version
+
 }

@@ -3,11 +3,27 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/navgraph"
-    app:startDestination="@id/newsFragment">
+    app:startDestination="@id/movieDashFragment">
+
 
     <fragment
-        android:id="@+id/newsFragment"
-        android:name="com.example.demo.ui.NewsFragment"
-        android:label="fragment_news"
-        tools:layout="@layout/fragment_news" />
+        android:id="@+id/movieDashFragment"
+        android:name="com.example.demo.ui.MovieDashFragment"
+        android:label="fragment_movie_das"
+        tools:layout="@layout/fragment_movie_das" />
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.example.demo.ui.ProfileFragment"
+        android:label="fragment_profile"
+        tools:layout="@layout/fragment_profile" />
+    <fragment
+        android:id="@+id/searchkFragment2"
+        android:name="com.example.demo.ui.slider.SearchkFragment"
+        android:label="fragment_searchk"
+        tools:layout="@layout/fragment_searchk" />
+    <fragment
+        android:id="@+id/demoFragment"
+        android:name="com.example.demo.ui.slider.DemoFragment"
+        android:label="fragment_demo"
+        tools:layout="@layout/fragment_demo" />
 </navigation>
