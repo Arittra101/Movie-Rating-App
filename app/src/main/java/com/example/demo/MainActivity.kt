@@ -28,6 +28,7 @@
              val navController = Navigation.getNavController(this,R.id.fragmentContainerView)
 
 
+
             binding.cvHome.setOnClickListener {
                 if(currentPosition!=R.id.movieDashFragment){
                     navigateTo(navController,R.id.movieDashFragment)
