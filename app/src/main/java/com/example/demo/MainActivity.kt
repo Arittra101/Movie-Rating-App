@@ -29,6 +29,7 @@
 
 
 
+
             binding.cvHome.setOnClickListener {
                 if(currentPosition!=R.id.movieDashFragment){
                     navigateTo(navController,R.id.movieDashFragment)
